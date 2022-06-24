@@ -5,14 +5,16 @@
         //* Combinations is a collection of items where the order of the items doesn't matter
         /* 
         combinations of [a,b,c] is
-        []
-        [a]
-        [b]
-        [c]
-        [a,b]
-        [b,c]
-        [a,c]
-        [a,b,c]
+        [
+            []
+            [a]
+            [b]
+            [c]
+            [a,b]
+            [b,c]
+            [a,c]
+            [a,b,c]
+        ]
 
         Given a set of n things, there are 2^n possible combinations
         when solving this sort of problems, the decision process is binary.
