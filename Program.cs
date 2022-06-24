@@ -7,9 +7,9 @@ Console.WriteLine("Hello, Algorithms practice!");
 
 #region Recursion & DP
 #region Fibonacci
-var solution = new Fibonacci();
-var input = 10;
-Console.WriteLine($"{input} : {solution.Fib(input)}");
+// var solution = new Fibonacci();
+// var input = 10;
+// Console.WriteLine($"{input} : {solution.Fib(input)}");
 
 //var fibWithMemo = new FibonacciWithMemo();
 //Console.WriteLine($"{input} : {fibWithMemo.Solution(input)}");
@@ -22,9 +22,9 @@ Console.WriteLine($"{input} : {solution.Fib(input)}");
 #endregion
 
 #region combinations
-//var combinationsInput = new char[] { 'a', 'b', 'c' };
-//var getCombinations = new Combinations();
-//var results = getCombinations.Solution(combinationsInput);
+var getCombinations = new Combinations();
+var results = getCombinations.Solution(new char[] { 'a', 'b', 'c' });
+System.Console.WriteLine(results.Count);
 #endregion
 
 #region Permutations
