@@ -22,24 +22,25 @@ Console.WriteLine("Hello, Algorithms practice!");
 #endregion
 
 #region combinations
-var getCombinations = new Combinations();
-var results = getCombinations.Solution(new char[] { 'a', 'b', 'c' });
-System.Console.WriteLine(results.Count);
+// var getCombinations = new Combinations();
+// var results = getCombinations.Solution(new char[] { 'a', 'b', 'c' });
+// System.Console.WriteLine(results.Count);
 #endregion
 
 #region Permutations
-//var getPermutations = new Permutations();
-//var input = new char[] { 'a', 'b', 'c', 'd', 'e', 'f' };
-//var startTime = DateTime.Now;
-//var results = getPermutations.Solution(input);
-//var endTime = DateTime.Now;
-//Console.WriteLine($"duration with Solution: {endTime.Millisecond - startTime.Millisecond}");
+// var getPermutations = new Permutations();
+// // var input = new char[] { 'a', 'b', 'c' };
+// var input = new char[] { 'a', 'b', 'c', 'd', 'e', 'f' };
+// var startTime = DateTime.Now;
+// var results = getPermutations.Solution(input);
+// var endTime = DateTime.Now;
+// Console.WriteLine($"duration with Solution: {endTime.Millisecond - startTime.Millisecond}");
 
-//var arrayinput = new char[] { 'a', 'b', 'c', 'd', 'e', 'f' };
-//var arraystartTime = DateTime.Now;
-//var arrayresults = getPermutations.SolutionUsingArrayIndex(arrayinput);
-//var arrayendTime = DateTime.Now;
-//Console.WriteLine($"duration with SolutionUsingArrayIndex: {arrayendTime.Millisecond - arraystartTime.Millisecond}");
+// var arrayinput = new char[] { 'a', 'b', 'c', 'd', 'e', 'f' };
+// var arraystartTime = DateTime.Now;
+// var arrayresults = getPermutations.SolutionUsingArrayIndex(arrayinput);
+// var arrayendTime = DateTime.Now;
+// Console.WriteLine($"duration with SolutionUsingArrayIndex: {arrayendTime.Millisecond - arraystartTime.Millisecond}");
 #endregion
 
 //var recursiveFactorial = new AlgorithmsPractice.Recursion.Factorial();
