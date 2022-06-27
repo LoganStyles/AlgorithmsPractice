@@ -34,7 +34,7 @@
 
          n will get smaller until we arrive at the base case of fib(2) or fib(1)
 
-         With multibranch recursions, we may b dealing multiple base cases.
+         With multibranch recursions, we are dealing with multiple base cases.
          Also they are best visualized as trees
          */
 
