@@ -1,4 +1,6 @@
-﻿namespace AlgorithmsPractice.Recursion
+﻿using System;
+
+namespace AlgorithmsPractice.Recursion
 {
     /*
          * Write a function 'fib(n)' that takes in a number as an
@@ -50,5 +52,44 @@
 
             return Fib(input - 1) + Fib(input - 2);
         }
+
+        #region  PRINT ALL FIBONACCI NUMBERS
+        //time: O(2^n)
+        //space: O(n)
+        public int PrintAllFib(int input)
+        {
+            if (input <= 2)
+            {
+                Console.WriteLine($"Fib for {input} is 1");
+
+                return 1;
+            }
+
+            var result = PrintAllFib(input - 1) + PrintAllFib(input - 2);
+            Console.WriteLine($"Fib for {input} is {result}");
+            return result;
+        }
+
+        //time: O(n* 2^n)
+        //space: O(n)
+        public void PrintAllFibPretty(int n)
+        {
+            for (int i = 0; i < n; i++)
+            {
+                Console.WriteLine(i + ": " + _PrintAllFibPretty(i));
+            }
+        }
+
+        private int _PrintAllFibPretty(int n)
+        {
+            if (n <= 0)
+                return 0;
+            else if (n == 1)
+                return 1;
+            return _PrintAllFibPretty(n - 1) + _PrintAllFibPretty(n - 2);
+        }
+
+        #endregion
+        
     }
 }
