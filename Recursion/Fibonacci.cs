@@ -90,6 +90,39 @@ namespace AlgorithmsPractice.Recursion
         }
 
         #endregion
+
+        /*
+         * 
+         * Fibonacci
+            The Fibonacci sequence begins like this:
+            0, 1, 1, 2, 3, 5, 8, 13, 21, 34
+            (each number is the sum of the previous two)
+
+            What is the sum of all odd numbers 
+            in the Fibonacci sequence that are less
+            than 10,000?
+
         
+         */
+
+        public int SumOfOddFibonacci(int input) {
+
+            return _SumOfOddFibonacci(input,0);
+         }
+
+        private int _SumOfOddFibonacci(int input, int sum)
+        {
+            if (input <= 2)
+            {
+                sum += 1;
+                return sum;
+            }
+
+            var result = _SumOfOddFibonacci(input - 1, sum) + _SumOfOddFibonacci(input - 2, sum);
+            if (result % 2 == 1)
+                sum += result;
+
+            return sum;
+        }
     }
 }
