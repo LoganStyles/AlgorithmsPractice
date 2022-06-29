@@ -8,7 +8,7 @@ Console.WriteLine("Hello, Algorithms practice!");
 #region Recursion & DP
 #region Fibonacci
 var solution = new Fibonacci();
-var input = 4;
+var input = 14;
 
 // Console.WriteLine($"{input} : {solution.Fib(input)}");
 
@@ -27,7 +27,12 @@ var input = 4;
 // duration = endTime - startTime;
 // Console.WriteLine($"duration for PrintAllFibPretty is {duration.Milliseconds}");
 
-Console.WriteLine($"sum of odd fib nums less than {input}: {solution.SumOfOddFibonacci(input)}");
+var startTime = DateTime.Now;
+var result = solution.SumOfOddFibonacciFaster(input);
+Console.WriteLine($"sum of odd fib nums less than {input}: {result}");
+var endTime = DateTime.Now;
+var duration = endTime - startTime;
+Console.WriteLine($"duration for SumOfOddFibonacciFaster is {duration.Milliseconds}");
 #endregion
 
 #region Sum

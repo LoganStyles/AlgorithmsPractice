@@ -53,6 +53,8 @@ namespace AlgorithmsPractice.Recursion
             return Fib(input - 1) + Fib(input - 2);
         }
 
+        
+
         #region  PRINT ALL FIBONACCI NUMBERS
         //time: O(2^n)
         //space: O(n)
@@ -91,6 +93,8 @@ namespace AlgorithmsPractice.Recursion
 
         #endregion
 
+        #region sum of odd fib
+
         /*
          * 
          * Fibonacci
@@ -102,27 +106,71 @@ namespace AlgorithmsPractice.Recursion
             in the Fibonacci sequence that are less
             than 10,000?
 
+            less than 60=>1+1+3+5+13+21+55=23
+            Fib(1) => 1
+            Fib(2)=> 1
+            Fib(3) => 2
+            Fib(4) => 3
+            Fib(5) => 5
+            Fib(6) => 8
+            Fib(7) => 13
+            Fib(8) => 21
+            Fib(9) => 34
+            Fib(10) => 55
         
          */
 
-        public int SumOfOddFibonacci(int input) {
-
-            return _SumOfOddFibonacci(input,0);
-         }
-
-        private int _SumOfOddFibonacci(int input, int sum)
+        /* 
+        time: O(n* 2^n)
+        space: O(n)
+        */
+        public int SumOfOddFibonacci(int limit)
         {
-            if (input <= 2)
+            var sum = 0;
+            var input = 1;
+            while (sum < limit)
             {
-                sum += 1;
-                return sum;
-            }
+                var result = _SumOfOddFibonacci(input);
+                if (result % 2 == 1)
+                    sum += result;
 
-            var result = _SumOfOddFibonacci(input - 1, sum) + _SumOfOddFibonacci(input - 2, sum);
-            if (result % 2 == 1)
-                sum += result;
+                input++;
+            }
 
             return sum;
         }
+
+        private int _SumOfOddFibonacci(int input)
+        {
+            if (input <= 2)
+                return 1;
+
+            return _SumOfOddFibonacci(input - 1) + _SumOfOddFibonacci(input - 2);
+        }
+
+        //time:O(n)
+        //space:O(1)
+        public int SumOfOddFibonacciFaster(int n)
+        {
+            var sum = 0;
+            var previous = 0;
+            var current = 1;
+
+            while (current <= n)
+            {
+                if (current % 2 != 0)
+                {
+                    sum += current;
+                }
+
+                //1,1,2,3,5,8,13,21,34
+                current += previous;
+                previous = current - previous;
+            }
+
+            return sum;
+        }
+
+        #endregion
     }
 }
