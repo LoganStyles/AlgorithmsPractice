@@ -53,7 +53,20 @@ namespace AlgorithmsPractice.Recursion
             return Fib(input - 1) + Fib(input - 2);
         }
 
-        
+        /* 
+        faster
+         */
+
+//         public int FibAsASeries(int input)
+//         {
+//             var result = 0;
+//             var previous =0;
+//             for (var current = 1; current <= input; current++) {
+// result=current;
+
+//              }
+//             return result;
+//         }
 
         #region  PRINT ALL FIBONACCI NUMBERS
         //time: O(2^n)
@@ -159,9 +172,7 @@ namespace AlgorithmsPractice.Recursion
             while (current <= n)
             {
                 if (current % 2 != 0)
-                {
                     sum += current;
-                }
 
                 //1,1,2,3,5,8,13,21,34
                 current += previous;
