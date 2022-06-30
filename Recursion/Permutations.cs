@@ -6,7 +6,7 @@
          * Permutations is a collection of items where the order of the items matters
 
          With combinations we decide whether or not to include an element. 
-         With permutations we definitely include an element but we decide where to put it.
+         With permutations we include an element but we decide where to put it.
          
          * e.g
          * Given a collection of elements {a,b,c}, 
