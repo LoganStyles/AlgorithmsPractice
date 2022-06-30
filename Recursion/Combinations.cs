@@ -31,7 +31,7 @@
         /*
          * base case: determine what would b the base case for this problem by
          establishing a minute part of the problem whose answer we alrady know.
-         in this example, considert that when given an empty array, we know that
+         in this example, consider that when given an empty array, we know that
          its combination would b an empty array.
 
          psuedocode:
